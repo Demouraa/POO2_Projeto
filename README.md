@@ -9,7 +9,7 @@ O projeto está organizado em camadas bem definidas:
 ```
 src/
 ├── Main.java                     # Ponto de entrada - inicialização completa do sistema
-├── database/                     # 🏗️ Camada de Domínio (Entidades)
+├── Model/                        # 🏗️ Camada de Domínio (Entidades)
 │   ├── Cliente.java              # Classe abstrata base para clientes
 │   ├── PessoaFisica.java         # Cliente pessoa física (CPF) - desconto 5% >5 dias
 │   ├── PessoaJuridica.java       # Cliente pessoa jurídica (CNPJ) - desconto 10% >3 dias
@@ -31,7 +31,7 @@ src/
 
 ## 🏗️ Arquitetura em Camadas
 
-### 🏛️ Camada de Domínio (`database/`)
+### 🏛️ Camada de Domínio (`model/`)
 **Entidades de negócio com regras e validações:**
 
 - **`Cliente`** (abstrata): Base para clientes com documento e nome
@@ -128,7 +128,7 @@ java Main
 
 1. **Compilar manualmente**:
 ```bash
-javac -d . src/database/*.java
+javac -d . src/model/*.java
 javac -d . src/repositories/*.java  
 javac -d . src/services/*.java
 javac -d . src/views/*.java
